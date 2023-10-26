@@ -8,7 +8,7 @@ class MessageService {
 				{ from: forId, for: fromId },
 			],
 		})
-			.sort({ createdAt: "desc" })
+			.sort({ createdAt: 1 })
 			.limit(300);
 	}
 
