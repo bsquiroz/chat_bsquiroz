@@ -11,7 +11,7 @@ export const SocketProvider = ({ children }) => {
 	const { auth } = useContextChatApp().useAuthContext;
 	const { dispatch } = useContextChatApp().useChat;
 	const { socket, online, connnectSocket, disconnectSocket } = useSocket(
-		"http://localhost:3001"
+		import.meta.env.VITE_API_URL_SOCKETS
 	);
 
 	useEffect(() => {
