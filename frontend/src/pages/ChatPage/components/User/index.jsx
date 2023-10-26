@@ -23,6 +23,10 @@ export const User = ({ user }) => {
 			payload: messages,
 		});
 
+		dispatch({
+			type: chatTypes.SHOW_LIST_USER,
+		});
+
 		scrollToBottom("contentMessages");
 	};
 

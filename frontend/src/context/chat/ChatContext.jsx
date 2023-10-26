@@ -8,6 +8,7 @@ const initialState = {
 	activeChat: null,
 	users: [],
 	messages: [],
+	showListUser: false,
 };
 
 export const ChatProvider = ({ children }) => {

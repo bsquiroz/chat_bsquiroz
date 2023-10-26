@@ -40,6 +40,13 @@ export const chatReducer = (state, action) => {
 				activeChat: null,
 				users: [],
 				messages: [],
+				showListUser: false,
+			};
+
+		case chatTypes.SHOW_LIST_USER:
+			return {
+				...state,
+				showListUser: !state.showListUser,
 			};
 
 		default:

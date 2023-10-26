@@ -4,7 +4,7 @@ import { ContentMessages } from "./components/ContentMessages";
 
 export const ChatPage = () => {
 	return (
-		<section className="min-h-screen grid grid-cols-3 ">
+		<section className="min-h-screen flex flex-col md:grid md:grid-cols-3">
 			<ContentUsers />
 			<ContentMessages />
 		</section>

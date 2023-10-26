@@ -16,7 +16,7 @@ export const Messages = () => {
 	return (
 		<section
 			id="contentMessages"
-			className="p-5 flex flex-col gap-2 flex-1 max-h-contentMessages scroll-style overflow-y-auto border-l-2 border-b-2 dark:border-slate-400 border-emerald-500"
+			className="p-5 flex flex-col gap-2 flex-1 max-h-contentMessages scroll-style overflow-y-auto md:border-l-2 md:border-b-2 md:dark:border-slate-400 md:border-emerald-500"
 		>
 			{messages.map((msg) =>
 				msg.for === uid ? (
