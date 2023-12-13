@@ -3,7 +3,7 @@ import { ChatProvider } from "./context/chat/ChatContext";
 import { SocketProvider } from "./context/socketContext";
 
 import { AppRouter } from "./router/AppRouter";
-import { Container } from "./components";
+import { Container, Tutorial } from "./components";
 
 export const ChatApp = () => {
 	return (
@@ -12,6 +12,7 @@ export const ChatApp = () => {
 				<SocketProvider>
 					<Container>
 						<AppRouter />
+						<Tutorial />
 					</Container>
 				</SocketProvider>
 			</AuthProvider>

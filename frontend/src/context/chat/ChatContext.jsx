@@ -9,6 +9,7 @@ const initialState = {
 	users: [],
 	messages: [],
 	showListUser: false,
+	showTutorial: false,
 };
 
 export const ChatProvider = ({ children }) => {

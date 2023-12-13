@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { BoxInput, InputSubmit } from "../../components";
+import { BoxInput, InputSubmit, TextTutorial } from "../../components";
 import { useContextChatApp } from "../../context/useContext";
 import { showToast } from "../../helper/toast";
 
@@ -73,6 +73,7 @@ export const LoginPage = () => {
 				</p>
 
 				<InputSubmit text={"login"} />
+				<TextTutorial />
 			</form>
 		</section>
 	);

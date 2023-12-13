@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { BoxInput, InputSubmit } from "../../components";
+import { BoxInput, InputSubmit, TextTutorial } from "../../components";
 import { showToast } from "../../helper/toast";
 import { useContextChatApp } from "../../context/useContext";
 
@@ -78,6 +78,8 @@ export const RegisterPage = () => {
 				</p>
 
 				<InputSubmit text={"register"} />
+
+				<TextTutorial />
 			</form>
 		</section>
 	);

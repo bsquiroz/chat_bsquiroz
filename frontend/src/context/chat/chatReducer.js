@@ -49,6 +49,12 @@ export const chatReducer = (state, action) => {
 				showListUser: !state.showListUser,
 			};
 
+		case chatTypes.SHOW_TUTORIAL:
+			return {
+				...action.state,
+				showTutorial: !state.showTutorial,
+			};
+
 		default:
 			return state;
 	}
