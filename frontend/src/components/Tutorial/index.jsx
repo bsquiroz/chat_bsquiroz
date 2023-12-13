@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useContextChatApp } from "../../context/useContext";
 import { chatTypes } from "../../context/chat/chatTypes";
 
@@ -13,6 +13,16 @@ export const Tutorial = () => {
 	const handleVisible = showTutorial
 		? "opacity-1 visible"
 		: "opacity-0 invisible";
+
+	useEffect(() => {
+		if (!JSON.parse(localStorage.getItem("tutorialChatBs"))) {
+			dispatch({
+				type: chatTypes.SHOW_TUTORIAL,
+			});
+
+			localStorage.setItem("tutorialChatBs", true);
+		}
+	}, []);
 
 	return (
 		<section
@@ -29,16 +39,17 @@ export const Tutorial = () => {
 				>
 					x
 				</span>
-				<div className="w-[350px] h-[250px] sm:w-[560px] sm:h-[315px]">
-					<iframe
-						width={"100%"}
-						height={"100%"}
-						src="https://www.youtube.com/embed/xeSIIB17jwc?si=_LYH3TniSQaneCeP"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen
-					></iframe>
+				<div className="w-[350px] h-[250px] sm:w-[560px] sm:h-[315px] bg-black">
+					{showTutorial && (
+						<iframe
+							width={"100%"}
+							height={"100%"}
+							src="https://www.youtube.com/embed/BxsD1OXmu2w?si=zenJYMmKKLrYN-Bt"
+							title="YouTube video player"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowFullScreen
+						></iframe>
+					)}
 				</div>
 			</div>
 		</section>
